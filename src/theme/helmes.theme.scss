@@ -1,0 +1,126 @@
+$primary-color: #12B8FF;
+
+html {
+  --antd-wave-shadow-color: $primary-color;
+}
+
+body {
+  background-color: #F5F6FA;
+  padding-top: 65px;
+
+  .ant-typography + .ant-typography {
+    margin-top: 0;
+  }
+
+  h3 {
+    &.ant-typography {
+      font-family: 'Roboto', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 21px;
+      color: #3C4858;
+    }
+  }
+
+  h5 {
+    &.ant-typography {
+      font-family: 'Roboto', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+      color: #8492A6;
+    }
+  }
+
+  .ant-tag {
+    margin-bottom: 8px;
+  }
+
+  .ant-card {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+  }
+
+  .ant-tabs {
+    margin-top: 36px;
+
+    .ant-tabs-tab {
+      padding: 17px 25px;
+    }
+  }
+
+  .ant-tabs-top > .ant-tabs-nav::before,
+  .ant-tabs-bottom > .ant-tabs-nav::before,
+  .ant-tabs-top > div > .ant-tabs-nav::before,
+  .ant-tabs-bottom > div > .ant-tabs-nav::before {
+    border-bottom: 2px solid rgba(132, 146, 166, 0.15);
+  }
+
+  //overriding ANT design primary colors, could not get LESS to work.
+  .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+    color: $primary-color;
+  }
+
+  .ant-checkbox-wrapper:hover .ant-checkbox-inner,
+  .ant-checkbox:hover .ant-checkbox-inner,
+  .ant-checkbox-input:focus + .ant-checkbox-inner {
+    border-color: $primary-color;
+  }
+
+  .ant-btn-primary, .ant-checkbox-checked .ant-checkbox-inner {
+    background-color: $primary-color;
+    border-color: $primary-color;
+  }
+
+  .ant-btn-primary {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 2px;
+  }
+
+  .ant-tabs-ink-bar {
+    background-color: $primary-color;
+  }
+
+  .ant-tabs-nav {
+    align-self: baseline;
+  }
+
+  .ant-card-extra {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  body {
+    .ant-tabs-nav {
+      align-self: unset;
+    }
+
+    .ant-card-extra {
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  body {
+    .ant-card-extra {
+      display: block;
+    }
+
+    .responsive-backdrop {
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, .15);
+
+      .ant-card {
+        margin: 50% 15px;
+      }
+    }
+  }
+}
