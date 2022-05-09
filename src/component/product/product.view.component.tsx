@@ -36,23 +36,23 @@ const ProductView: React.FC<Props> = (props: any) => {
                         )) }
                     </div>
 
-                    <Space direction="vertical" size="small" style={{ display: 'flex' }}>
-                        <Radio.Group onChange={(e) => { setOption(e.target.value) }} value={option}>
-                            { product.option1 && (
+                    { product.option1 && (
+                        <Space direction="vertical" size="small" style={{ display: 'flex' }}>
+                            <Radio.Group onChange={(e) => { setOption(e.target.value) }} value={option}>
                                 <Radio value={ 1 }>{ product.option1 }</Radio>
-                            ) }
-                        </Radio.Group>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </Space>
+                            </Radio.Group>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </Space>
+                    ) }
 
-                    <Space direction="vertical" size="small" style={{ display: 'flex' }}>
-                        <Radio.Group onChange={(e) => { setOption(e.target.value) }} value={option}>
-                            { product.option2 && (
+                    { product.option2 && (
+                        <Space direction="vertical" size="small" style={{ display: 'flex' }}>
+                            <Radio.Group onChange={(e) => { setOption(e.target.value) }} value={option}>
                                 <Radio value={ 2 }>{ product.option2 }</Radio>
-                            ) }
-                        </Radio.Group>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. </p>
-                    </Space>
+                            </Radio.Group>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. </p>
+                        </Space>
+                    ) }
                 </Space>
             </Card>
         </div>

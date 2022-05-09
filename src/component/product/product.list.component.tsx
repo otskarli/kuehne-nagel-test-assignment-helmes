@@ -28,7 +28,7 @@ const ProductList: React.FC<Props> = observer((props: any) => {
                                     ))
                                 }
                             </div>
-                            <span className={`product-category`}>{ product.productName }</span>
+                            <span className={`product-category`}>{ product.category }</span>
                         </div>
                     </Card>
                 ))
